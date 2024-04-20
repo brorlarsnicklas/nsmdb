@@ -30,14 +30,25 @@ final class DetailsViewModel: ObservableObject {
                             case .success(let item):
                                 self.item = item
                             case .failure( let error ):
-                                print("error", error)
+                                switch error {
+                                case .invalidURL:
+                                    self.alertItem = AlertContext.invalidURL
+                                case .invalidResponse:
+                                    self.alertItem = AlertContext.invalidResponse
+                                case .invalidData:
+                                    self.alertItem = AlertContext.invalidData
+                                case .unableToComplete:
+                                    self.alertItem = AlertContext.unableToComplete
+                                default:
+                                    self.alertItem = AlertContext.unexpectedError
+                                }
                             }
                             
                         }
                     }
                 }
             case .failure(let error):
-                print(error)
+                self.alertItem = AlertContext.unexpectedError
             }
         }
     }

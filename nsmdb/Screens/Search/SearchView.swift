@@ -14,10 +14,11 @@ struct SearchView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("NSMDB")
+                Text("Welcome to NSMDB")
                     .bold()
                     .font(.largeTitle)
-                Text("Search for your favorite movie or series")
+                Text("Search for your favorite movie or series and give it the rating it deserves.")
+                    .padding()
                 TextField("Enter a movie or series title...", text: $searchText)
                     .onChange(of: searchText, initial: true) { oldString, newString in
                         if newString.isEmpty, !oldString.isEmpty {

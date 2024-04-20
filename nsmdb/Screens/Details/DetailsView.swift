@@ -17,6 +17,8 @@ struct DetailsView: View {
                 if let item = viewModel.item {
                     Text(item.title)
                         .font(.title)
+                    Text("\(item.searchType.capitalized)")
+                    .font(.subheadline)
                     HStack {
                         PosterView(poster: item.poster, width: 180)
                         VStack {

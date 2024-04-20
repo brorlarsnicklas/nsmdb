@@ -10,7 +10,7 @@ import Foundation
 
 final class NetworkManager {
     static let shared = NetworkManager()
-    private let superSecret = "ADD YOUR KEY"
+    private let superSecret = "ADD YOUR KEY HERE"
     private let searchURL: String
     
     private init() {

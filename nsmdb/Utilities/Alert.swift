@@ -16,7 +16,7 @@ struct AlertItem: Identifiable {
 
 
 struct AlertContext {
-    static let invalidData      = AlertItem(title: Text("Server error"), message: Text("Contact support"), dismissButton: .default(Text("OK")))
+    static let invalidData      = AlertItem(title: Text("Invalid data"), message: Text("Try another search term"), dismissButton: .default(Text("OK")))
     static let invalidResponse  = AlertItem(title: Text("Invalid response"), message: Text("Contact support"), dismissButton: .default(Text("OK")))
     static let invalidURL       = AlertItem(title: Text("Invalid url"), message: Text("Bad url"), dismissButton: .default(Text("OK")))
     static let unableToComplete = AlertItem(title: Text("Server error"), message: Text("Connection error"), dismissButton: .default(Text("OK")))

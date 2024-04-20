@@ -37,7 +37,6 @@ struct RatingModalView: View {
                 }
                 Button(action: {
                     viewModel.isLoading = true
-                    print(viewModel.ratings)
                     if let unwrappedItem = item, viewModel.ratings.contains(where: { $0.id == unwrappedItem.id }) {
                         viewModel.updateRating(unwrappedItem)
                     } else {

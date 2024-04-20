@@ -101,6 +101,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9CADC222BD3A75000953815 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAFC5A2BD0F504006C2E22 /* SearchView.swift */,
+				C9DAFC6C2BD13442006C2E22 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C9CADC232BD3A76100953815 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAFC5F2BD0F63A006C2E22 /* DetailsView.swift */,
+				C9C503E12BD256A600B58DF3 /* DetailsViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		C9CADC242BD3A79600953815 /* Ratings */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAFC5C2BD0F519006C2E22 /* RatingsView.swift */,
+			);
+			path = Ratings;
+			sourceTree = "<group>";
+		};
 		C9D5334F2BD30A4600C11354 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,11 +199,9 @@
 		C9DAFC552BD0F487006C2E22 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				C9DAFC5A2BD0F504006C2E22 /* SearchView.swift */,
-				C9DAFC5C2BD0F519006C2E22 /* RatingsView.swift */,
-				C9DAFC5F2BD0F63A006C2E22 /* DetailsView.swift */,
-				C9DAFC6C2BD13442006C2E22 /* SearchViewModel.swift */,
-				C9C503E12BD256A600B58DF3 /* DetailsViewModel.swift */,
+				C9CADC232BD3A76100953815 /* Details */,
+				C9CADC242BD3A79600953815 /* Ratings */,
+				C9CADC222BD3A75000953815 /* Search */,
 			);
 			path = Screens;
 			sourceTree = "<group>";

@@ -29,9 +29,19 @@ final class SearchViewModel: ObservableObject {
                     }
                 case .failure( let error ):
                     self.isFinished = true
-                    print("Error", error)
+                    switch error {
+                    case .invalidURL:
+                        self.alertItem = AlertContext.invalidURL
+                    case .invalidResponse:
+                        self.alertItem = AlertContext.invalidResponse
+                    case .invalidData:
+                        self.alertItem = AlertContext.invalidData
+                    case .unableToComplete:
+                        self.alertItem = AlertContext.unableToComplete
+                    default:
+                        self.alertItem = AlertContext.unexpectedError
+                    }
                 }
-                
             }
         }
     }
